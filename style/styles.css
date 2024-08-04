@@ -1,0 +1,193 @@
+.logo {
+  width: 200px;
+  height: 50px;
+}
+.div-color{
+	background-color: none;
+	width: 40%;
+	margin-left: 140px;
+}
+
+h3{
+	color: Black;
+}
+a {
+    color: inherit; /* or specify your desired color, e.g., color: black; */
+    text-decoration: none; /* removes underline */
+}
+.text-center {
+  text-align: center;
+}
+
+.justify{
+text-align: justify;
+}
+
+.name-title{
+	font-weight: 700;
+	font-size: 40px;
+
+}
+.header {
+  background-image: url('../images/developer.png'), url('../images/header_bg.png');
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  padding-top: 30px;
+}
+
+.secondary-bg {
+  background-color: rgb(255, 248, 243);
+}
+
+.text-primary{
+	color: #e80879;
+}
+
+.button{
+	background-color: #e80879;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: 20px 25px 20px 25px;
+}
+.button-cv{
+	background-color: #e80879;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: 20px 25px 20px 25px;
+}
+
+.button-top-margin {
+  margin-top: 50px;
+}
+
+.metal-mania-regular {
+  font-family: "Metal Mania", system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+
+nav{
+	display: flex;
+	align-items: center;
+	justify-content:space-between;
+	margin: 0px 100px 0px 200px;
+}
+nav ul{
+	display: flex;
+	align-items: center;
+}
+nav ul li{
+	display: flex;
+	list-style: none;
+	margin-right: 50px;
+}
+
+
+
+
+.banner {
+	display: flex;
+  justify-content: space-between;
+  margin: 0px 100px 0px 200px;}
+
+.banner-greetings {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.banner-title {
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.banner-description {
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(117, 117, 117);
+}
+
+.banner-profile-pic {
+  width: 460px;
+}
+
+.padding{padding: 10px 150px;}
+
+.aboutme {
+  padding: 10px 150px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.about-description {
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(117, 117, 117);
+}
+
+.about-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item-title {
+  color: #757575;
+  font-size: 18px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.item-description {
+  font-size: 14px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+
+.skills-div {
+  display: flex;
+  gap: 20px;
+}
+
+.resume-flex {
+  display: flex;
+  gap: 40px;
+}
+
+.resume-body {
+  font-size: 18px;
+  font-weight: 600;
+  color: #757575;
+  margin: 0px;
+  padding: 0px;
+}
+
+.section-title {
+  font-size: 20px;
+  color: black;
+}
+
+
+footer {
+  padding: 130px 230px;
+  display: flex;
+  gap: 50px;
+}
+
+.footer-column {
+  width: 50%;
+}
+
+footer input[type="text"],
+footer input[type="email"],
+footer textarea {
+  height: 64px;
+  border-radius: 5px;
+  background-color: white;
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 10px 20px;
+  display: block;
+  border: none;
+}

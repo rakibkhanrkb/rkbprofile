@@ -1,0 +1,138 @@
+/*common style*/
+body{
+	background-color: #f4f4f4;
+}
+a {
+    color: inherit; /* or specify your desired color, e.g., color: black; */
+    text-decoration: none; /* removes underline */
+}
+.flex{
+	display: flex;
+}
+.flexrev{
+	dispaly: flex;
+	flex-direction: column;
+}
+.padding{
+	padding-left: 30px;
+}
+.margin{
+	margin: 20px;
+}
+.center{
+	align-items: center;
+	text-align: center;
+}
+
+.task1{
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  margin: auto;
+  padding-bottom: 10px;
+  padding-top: 25px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding-bottom: 0px;
+}
+
+
+
+
+.task21{
+	color: white;
+	background-color: #27cbee;
+	justify-content: space-between;
+	text-align: center;
+	width: 30%;
+	border-radius: 5px;
+	vertical-align: middle;
+	line-height: 100px;
+	font-size: 30px;
+	
+}
+.task22{
+	color: white;
+	background-color: #1b73f9;
+	justify-content: space-between;
+	text-align: center;
+	width: 30%;
+	border-radius: 5px;
+	vertical-align: middle;
+	line-height: 100px;
+	font-size: 30px;
+	
+}
+
+.task23{
+	color: white;
+	background-color: #218656;
+	justify-content: space-between;
+	text-align: center;
+	width: 30%;
+	border-radius: 5px;
+	vertical-align: middle;
+	line-height: 100px;
+	font-size: 30px;	
+}
+
+
+.task3{
+	background-color: #fceae9;
+	border-radius: 5px;
+	margin-right: 30px;
+	padding: 20px 0px 40px 0px;
+}
+
+.button{
+	background-color: #fd438a;
+	border: none;
+	width:15%;
+	border-radius: 5px;
+	color: white;
+	padding: 10px 20px 10px 20px;
+}
+.button-task1{
+	background-color: black;
+	border: none;
+	width:10%;
+	color: white;
+	padding: 10px 20px 10px 20px;
+	display: block;
+	margin: auto;
+}
+
+section input[type="Email"]{
+  height: 30px;
+  border-radius: 5px;
+  background-color: white;
+  width: 35%;
+  padding: 5px 10px;
+  border: none;
+  text-align: center;
+}
+
+.flexrev{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.paddingleft{
+	padding-left: 40%;
+}
+
+
+
+
+
+
+
