@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-Digit Random Number Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            gap: 10px;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .random-number {
+            font-size: 2em;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .generate-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .generate-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .input-box {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: calc(100% - 22px);
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .grid-item {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .grid-item:hover {
+            background-color: #0056b3;
+        }
+
+        .submit-btn {
+            grid-column: span 3;
+            background-color: #dc3545;
+        }
+
+        .clear-btn:hover {
+            background-color: #c82333;
+        }
+
+        .single-clear-btn {
+            background-color: #ffc107;
+        }
+
+        .single-clear-btn:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="random-number" id="randomNumber">000000</div>
+        <button class="generate-btn" onclick="generateRandomNumber()"> Number Generate</button>
+    </div>
+    <div class="container">
+        <div class="" id="message"></div>
+        <input type="text" class="input-box" id="inputBox" readonly>
+        <div class="grid-container">
+            <button class="grid-item" onclick="appendNumber(1)">1</button>
+            <button class="grid-item" onclick="appendNumber(2)">2</button>
+            <button class="grid-item" onclick="appendNumber(3)">3</button>
+            <button class="grid-item" onclick="appendNumber(4)">4</button>
+            <button class="grid-item" onclick="appendNumber(5)">5</button>
+            <button class="grid-item" onclick="appendNumber(6)">6</button>
+            <button class="grid-item" onclick="appendNumber(7)">7</button>
+            <button class="grid-item" onclick="appendNumber(8)">8</button>
+            <button class="grid-item" onclick="appendNumber(9)">9</button>
+            <button class="grid-item" onclick="appendNumber(0)">0</button>
+            <button class="grid-item single-clear-btn" onclick="clearLastDigit()">←</button>
+            <button class="grid-item" onclick="clearInput()">Clear</button>
+            <button class="grid-item submit-btn" onclick="submit()">Submit</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        function generateRandomNumber() {
+            const randomNumber = Math.floor(100000 + Math.random() * 900000);
+            document.getElementById('randomNumber').innerText = randomNumber;
+        }
+
+        function appendNumber(number) {
+            const inputBox = document.getElementById('inputBox');
+            if (inputBox.value.length < 6) {
+                inputBox.value += number;
+            }
+        }
+        function clearInput() {
+            document.getElementById('inputBox').value = '';
+        }
+        function clearLastDigit() {
+            const inputBox = document.getElementById('inputBox');
+            inputBox.value = inputBox.value.slice(0, -1);
+        }
+        function submit() {
+            const inputBox = document.getElementById('inputBox');
+            const randomNumber = document.getElementById('randomNumber').innerText;
+            const messageBox = document.getElementById('message');
+            
+            if (inputBox.value === randomNumber) {
+                messageBox.innerText = "Number Match";
+            } else {
+                messageBox.innerText = "Number not Match";
+            }
+        }
+    </script>
+</body>
+
+</html>

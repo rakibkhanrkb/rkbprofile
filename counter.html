@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: auto;
+            padding-top: 20px;
+            width: 40%;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .center{
+            text-align: center;
+        }
+
+        .counter-container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .counter {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content:center;
+            gap: 20px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .button:active {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="center"><h1>COUNTER</h1></div>
+    <div class="counter-container">
+        <div class="counter" id="counter"></div>
+        <div class="buttons">
+            <button class="button" onclick="increment()">Increment</button>
+            <button class="button" onclick="decrement()">Decrement</button>
+        </div>
+      
+    </div>
+    <footer>
+        <p class="center"><small>All rights preserved by RKB</small></p>
+    </footer>
+
+    <script>
+        let count = localStorage.getItem("localcache")||0;
+        document.getElementById('counter').innerHTML=count;
+
+        function increment() {
+            count++;
+            document.getElementById('counter').textContent = count;
+            localStorage.setItem("localcache",count);
+        }
+
+        function decrement() {
+            if (count > 0) {
+                count--;
+            }
+            document.getElementById('counter').textContent = count;
+            localStorage.setItem("localcache",count);
+        }
+    </script>
+</body>
+</html>
