@@ -220,9 +220,9 @@
             const messageBox = document.getElementById('message');
 
             if (inputBox.value === randomNumber) {
-                messageBox.innerText = "Number Match";
+                messageBox.innerHTML = "\u2713 Key Match! Thank You";
             } else {
-                messageBox.innerText = "Number Not Match";
+                messageBox.innerHTML = "\u2717 Key Not Match";
             }
         }
         const box1Height = document.getElementById('box1').offsetHeight;
