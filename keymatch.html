@@ -19,18 +19,18 @@
 
 
         #box1 {
-            height: 240px;
+            height: fit-content;
             /* height */
-            padding: 120px 20px 40px 20px;
+            padding: 140px 40px 140px 40px;
             border-top-left-radius: 8px;
             border-bottom-left-radius: 8px;
 
         }
 
         #box2 {
-            height: auto;
+            height: fit-content;
             /* This will be adjusted by JS */
-            padding: 0px;
+            padding: 20px;
             border-top-right-radius: 8px;
             border-bottom-right-radius: 8px;
 
@@ -91,7 +91,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
         }
-    
+
 
         .grid-item {
             background-color: #333333;
@@ -150,27 +150,65 @@
                 align-items: center;
                 width: 100%;
             }
-            .container{
-                height: auto;
+
+            h2 {
+                color: white;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                font-size: 12px;
             }
 
+
             .grid-item {
+                background-color: #333333;
+                color: #fff;
+                border: none;
+                padding: 2px;
+                font-size: 1.5em;
+                cursor: pointer;
+                border-radius: 5px;
+                margin: 0px 2px 0px 2px;
+            }
+
+            .grid-container {
                 display: grid;
-                grid-column: 1;
-                gap: 1px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2px;
             }
 
             .input-box {
                 font-size: 1em;
-                width: auto;
+                width: 80%;
                 box-sizing: border-box;
             }
 
-        }
+
+            .submit-btn {
+                grid-column: span 2;
+                background-color: #dc3545;
+            }
+
+            .flexinput {
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            #box1,
+            #box2 {
+                width: 90%;
+                padding: 0px;
+                border-radius: 2px;
+                height: auto;
+                /* Allow the height to adjust based on content */
+            }
     </style>
 </head>
 
 <body>
+    <a href="index.html"><button class="grid-item single-clear-btn">←Back</button></a>
     <div id="box1" class="container flex">
         <div class="random-number" id="randomNumber">******</div>
         <button class="generate-btn" onclick="generateRandomNumber()"> Number Generate</button>
@@ -212,6 +250,7 @@
         }
         function clearInput() {
             document.getElementById('inputBox').value = '';
+            document.getElementById('message').innerHTML = "&nbsp;";
         }
         function clearLastDigit() {
             const inputBox = document.getElementById('inputBox');
@@ -228,8 +267,9 @@
                 messageBox.innerHTML = "\u2717 Key Not Match";
             }
         }
-        const box1Height = document.getElementById('box1').offsetHeight;
-        document.getElementById('box2').style.height = box1Height + 'px';
+        
+        
+
     </script>
 </body>
 
