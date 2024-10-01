@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Item Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .food-button {
+            padding: 15px 30px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            background-color: black;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .food-button:hover {
+            background-color: #e6b800;
+        }
+        
+        .navbar {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            position: relative; /* Important for dropdown positioning */
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff6347;
+        }
+
+    </style>
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">R<span style="color: #e80879;">K</span>B</div>
+        <h1 class="text-white font-bold text-3xl text-center">Food Galary</h1>
+        <div></div>
+    </nav>
+
+    <!-- banner start -->
+  <div class="carousel w-full">
+    <!-- banner 1 -->
+    <div id="slide1" class="carousel-item relative w-full">
+      <div class="hero" style="background-image: url(Resources/banner1.jpg);">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-neutral-content text-center py-20">
+          <div class="max-w-3xl">
+            <h1 class="mb-5 text-5xl font-bold">What's is Your Favorite Food?</h1>
+            <p class="mb-5">To create exceptional community experiences through traditional Taiwanese tea flavors,
+              inspiring happiness in every cup.
+              Maybe you’re the next member of The Teahouse family.
+            </p>
+            <button class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+      <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+        <a href="#slide4" class="btn btn-circle">❮</a>
+        <a href="#slide2" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+    <!-- banner 2 -->
+    <div id="slide2" class="carousel-item relative w-full">
+      <div class="hero" style="background-image: url(Resources/banner2.jpg);">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-neutral-content text-center">
+          <div class="max-w-3xl">
+            <h1 class="mb-5 text-5xl font-bold">What's is Your Favorite Food?</h1>
+            <p class="mb-5">To create exceptional community experiences through traditional Taiwanese tea flavors,
+              inspiring happiness in every cup.
+              Maybe you’re the next member of The Teahouse family.
+            </p>
+            <button class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+      <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+        <a href="#slide1" class="btn btn-circle">❮</a>
+        <a href="#slide3" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+    <!-- banner 3 -->
+    <div id="slide3" class="carousel-item relative w-full">
+      <<div class="hero" style="background-image: url(Resources/banner3.jpg);">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-neutral-content text-center">
+          <div class="max-w-3xl">
+            <h1 class="mb-5 text-5xl font-bold">What's is Your Favorite Food?</h1>
+            <p class="mb-5">To create exceptional community experiences through traditional Taiwanese tea flavors,
+              inspiring happiness in every cup.
+              Maybe you’re the next member of The Teahouse family.
+            </p>
+            <button class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+    </div>
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide2" class="btn btn-circle">❮</a>
+      <a href="#slide4" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+  <!-- banner 4 -->
+  <div id="slide4" class="carousel-item relative w-full">
+    <div class="hero" style="background-image: url(Resources/banner4.jpg);">
+      <div class="hero-overlay bg-opacity-60"></div>
+      <div class="hero-content text-neutral-content text-center">
+        <div class="max-w-3xl">
+          <h1 class="mb-5 text-5xl font-bold">What's is Your Favorite Food?</h1>
+          <p class="mb-5">To create exceptional community experiences through traditional Taiwanese tea flavors,
+            inspiring happiness in every cup.
+            Maybe you’re the next member of The Teahouse family.
+          </p>
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+      </div>
+    </div>
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide3" class="btn btn-circle">❮</a>
+      <a href="#slide1" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+  </div>
+  <!-- banner end -->
+
+    <h1 class="p-2">Select a Food Item</h1>
+    
+    <button class="food-button"  value="pizza" onclick=" loadFood(this) " >Pizza</button>
+    <button class="food-button"  value="Burger" onclick=" loadFood(this) " >Burger</button>
+    <button class="food-button"  value="Chicken" onclick=" loadFood(this) " >Chicken</button>
+    <button class="food-button" value="Salad" onclick=" loadFood(this) " >Salad</button>
+    <section>
+      <div id="result-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 p-5">
+      </div>
+    </section>
+
+
+    <script src="js/food.js">
+    </script>
+</body>
+</html>
